@@ -100,7 +100,7 @@ export default function FabricsPage() {
                                         src={item.image}
                                         alt={item.title}
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         sizes="(max-width: 768px) 100vw, 33vw"
                                     />
                                 </div>

@@ -25,6 +25,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 import ChatWidget from "@/components/ChatWidget";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ThemeToggle from "@/components/ThemeToggle";
 
 // ... existing imports
 
@@ -34,17 +36,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${inter.variable} antialiased font-sans bg-background text-foreground`}
       >
-        <SmoothScroll>
-          <Preloader />
-          <CustomCursor />
-          {children}
-          <Footer />
-          <ChatWidget />
-        </SmoothScroll>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <SmoothScroll>
+            <Preloader />
+            <CustomCursor />
+            {children}
+            <Footer />
+            <ChatWidget />
+            <ThemeToggle />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ const HeroSection = () => {
                     alt="Luxury Tailoring Atelier"
                     fill
                     priority
-                    className="object-cover object-center opacity-60"
+                    className="object-cover object-center"
                     sizes="100vw"
                 />
                 {/* Dark Gradient Overlay */}

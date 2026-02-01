@@ -8,6 +8,18 @@
   /* Warm beige */
 }
 
+[data-theme='light'],
+.light {
+  --background: #F5F5F0;
+  /* Off-white / Cream */
+  --foreground: #1A1A1A;
+  /* Charcoal */
+  --secondary: #595959;
+  /* Grey */
+  --accent: #8B7E66;
+  /* Darker Bronze/Gold */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
