@@ -12,27 +12,27 @@ const fabrics = [
     {
         title: "Egyptian Cotton",
         description: "Crisp, cool, and undeniably smooth. The perfect foundation for our bespoke shirting collection.",
-        image: "/images/fabric-texture.png",
+        image: "/images/fabric-cotton.png",
     },
     {
         title: "Irish Linen",
         description: "Sourced from the finest mills in Ireland. A summer essential known for its unique texture and cooling properties.",
-        image: "/images/fabric-texture.png",
+        image: "/images/fabric-linen.png",
     },
     {
         title: "Pure Silk & Velvet",
         description: "For evening wear that commands attention. Rich lusters and deep piles for tuxedos and sherwanis.",
-        image: "/images/fabric-texture.png",
+        image: "/images/fabric-silk.png",
     },
     {
         title: "Vicuna & Cashmere",
         description: "The rarest fibers on earth. Unmatched softness and warmth for overcoats and winter jacketing.",
-        image: "/images/fabric-texture.png",
+        image: "/images/fabric-cashmere.png",
     },
     {
         title: "Technical Performance",
         description: "Modern innovation meets classic tailoring. Water-resistant, wrinkle-free, and high-stretch fabrics for travel.",
-        image: "/images/fabric-texture.png",
+        image: "/images/fabric-tech.png",
     }
 ];
 
@@ -43,7 +43,7 @@ export default function FabricsPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 z-10" />
                 <Image
-                    src="/images/fabric-texture.png"
+                    src="/images/fabric-hero.png"
                     alt="Luxury Fabric Rolls"
                     fill
                     className="object-cover"
