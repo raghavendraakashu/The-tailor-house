@@ -46,6 +46,12 @@ const Footer = () => {
                         >
                             Bespoke Suits Bangalore
                         </Link>
+                        <Link
+                            href="/wedding-tailor-bangalore"
+                            className="text-sm text-muted-foreground hover:text-foreground transition"
+                        >
+                            Wedding Tailor Bangalore
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -25,6 +25,13 @@ export default function Home() {
             className="underline underline-offset-4 hover:text-foreground transition"
           >
             bespoke suits in Bangalore
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="/wedding-tailor-bangalore"
+            className="underline underline-offset-4 hover:text-foreground transition"
+          >
+            wedding tailor services
           </Link>
           , tailored with precision and elegance.
         </p>

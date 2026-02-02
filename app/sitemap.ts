@@ -14,5 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "weekly",
             priority: 0.9,
         },
+        {
+            url: "https://the-tailor-house.vercel.app/wedding-tailor-bangalore",
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.9,
+        },
     ];
 }
