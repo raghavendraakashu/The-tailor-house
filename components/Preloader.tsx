@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const Preloader = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const pathname = usePathname();
 
     useEffect(() => {
-        // Simulate asset loading time or minimum wait for effect
+        // Failsafe: If the preloader doesn't dismiss naturally, force it after a timeout
+        // Also resets properly on hard refresh
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 2200);
@@ -15,40 +18,51 @@ const Preloader = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    // Ensure preloader dismisses if route changes (navigating between pages)
+    useEffect(() => {
+        if (isLoading) {
+            setIsLoading(false);
+            // Optional: keep it true if you want it to show on every nav, 
+            // but usually we want to ensure it doesn't get stuck.
+            // Here we imply: if navigation happens, content is ready, so dismiss.
+            // But actually, for a "splash" screen, we just want it once.
+            // If we are already loading, let the timer finish or user interaction dismiss?
+            // Actually, safest pattern for "stuck" loader is to dismiss on path change.
+        }
+    }, [pathname]);
+
     return (
         <AnimatePresence mode='wait'>
             {isLoading && (
                 <motion.div
                     className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0E0E0E]"
                     initial={{ opacity: 1 }}
-                    exit={{ y: "-100%" }}
-                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                    exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
                 >
                     {/* Content Container */}
                     <div className="relative overflow-hidden flex flex-col items-center">
 
                         {/* Animated Text */}
-                        <motion.div
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                            className="flex flex-col items-center gap-2"
-                        >
+                        <div className="flex flex-col items-center gap-2">
                             <h1 className="text-4xl md:text-6xl font-serif text-white tracking-widest uppercase">
                                 Tailor House
                             </h1>
                             <div className="flex items-center gap-4 w-full justify-center">
                                 <motion.div
-                                    className="h-[1px] bg-accent w-0"
-                                    animate={{ width: "40px" }} // width doesn't animate well with 'w', use number or string width
-                                    style={{ width: 0 }}
-                                    whileInView={{ width: 60 }} // Actually we are not scrolling.
-                                // Use standard animate prop
+                                    className="h-[1px] bg-accent"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: 60 }}
+                                    transition={{ duration: 0.8, delay: 0.5 }}
                                 />
                                 <span className="text-xs text-accent uppercase tracking-[0.3em]">Est. 1984</span>
-                                <motion.div className="h-[1px] bg-accent w-12" />
+                                <motion.div
+                                    className="h-[1px] bg-accent"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: 60 }}
+                                    transition={{ duration: 0.8, delay: 0.5 }}
+                                />
                             </div>
-                        </motion.div>
+                        </div>
 
                         {/* Loading Line */}
                         <motion.div
