@@ -13,8 +13,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bespoke Tailoring | Handcrafted Luxury",
-  description: "Indian bespoke tailoring house. Crafted for generations.",
+  title: "The Tailor House | Bespoke Tailoring in Bangalore",
+  description: "Experience the art of bespoke tailoring in Bangalore. Premier custom suits, wedding sherwanis, and handcrafted luxury menswear. Creating legacies, one stitch at a time.",
+  openGraph: {
+    title: "The Tailor House | Bespoke Tailoring in Bangalore",
+    description: "Premier bespoke tailoring house in Bangalore. Handcrafted custom suits and wedding wear.",
+    type: "website",
+    locale: "en_IN",
+  },
+  verification: {
+    google: "FOJM0mviqtEH3wBBf2axZ9ILWBKHo9fO25VQMjQGk-g",
+  },
 };
 
 import Footer from "@/components/Footer";

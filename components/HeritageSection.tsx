@@ -26,16 +26,18 @@ const HeritageSection = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
                     <h2 className="text-4xl md:text-6xl font-serif text-foreground mb-8 leading-tight">
-                        Rooted in <span className="italic text-accent">Tradition</span>. <br />
-                        Refined through <br /> centuries.
+                        The Art of the <span className="italic text-accent">Perfect Fit</span>.
                     </h2>
 
                     <div className="space-y-6 text-secondary text-lg md:text-xl font-light leading-relaxed">
                         <p>
-                            Our atelier carries forward the art of bespoke tailoring — where patience, precision, and pride define every stitch.
+                            True luxury is not just seen; it is felt. At <strong className="text-white font-medium">The Tailor House</strong>, we believe that a suit is not merely an assembly of fabric and thread, but a personal architectural statement—a second skin crafted solely for you. As a premier <strong className="text-white font-medium">bespoke tailor in Bangalore</strong>, we uphold the rigorous traditions of Savile Row, reinterpreted for the modern Indian gentleman.
                         </p>
                         <p>
-                            We believe that true luxury is not just in the fabric, but in the hands that shape it. Every garment is a dialogue between the master tailor and the cloth, crafted not for trends, but for generations.
+                            In a world of mass production, we offer the rare luxury of patience. We are not just a <strong className="text-white font-medium">luxury tailor in Bangalore</strong>; we are custodians of a fading art form. From the hand-rolled lapels to the functional buttonholes, every stitch is a testament to uncompromising quality.
+                        </p>
+                        <p>
+                            Experience the distinction of true <strong className="text-white font-medium">custom suits in Bangalore</strong>. We invite you to step away from the noise of ready-to-wear and discover the silence of specific, handcrafted perfection.
                         </p>
                     </div>
 
