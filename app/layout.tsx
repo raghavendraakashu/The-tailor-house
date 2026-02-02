@@ -59,6 +59,29 @@ export default function RootLayout({
             <ThemeToggle />
           </SmoothScroll>
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Tailor",
+              "name": "The Tailoring House",
+              "url": "https://the-tailor-house.vercel.app",
+              "description": "Luxury bespoke tailoring house crafting custom suits and garments with precision and heritage craftsmanship.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Bangalore"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bangalore",
+                "addressCountry": "IN"
+              },
+              "priceRange": "$$$",
+              "sameAs": []
+            })
+          }}
+        />
       </body>
     </html>
   );
