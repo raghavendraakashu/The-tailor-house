@@ -53,7 +53,7 @@ const Footer = () => {
             {/* Bottom Bar */}
             <div className="max-w-7xl mx-auto mt-16 flex flex-col md:flex-row justify-between items-center text-xs opacity-40 font-light border-t border-white/5 pt-8">
                 <p>&copy; {currentYear} Tailor House. All rights reserved.</p>
-                <p className="mt-2 md:mt-0">Crafted by Design.</p>
+                <p className="mt-2 md:mt-0">Crafted by Fjord.</p>
             </div>
         </footer>
     );
