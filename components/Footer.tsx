@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import { useState } from 'react';
@@ -37,6 +38,15 @@ const Footer = () => {
                 {/* Links / Right */}
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-sm font-medium tracking-wide">
                     <LinkGroup title="Connect" links={connectLinks} />
+                    <div className="flex flex-col gap-4">
+                        <span className="text-xs uppercase tracking-widest opacity-50">Discover</span>
+                        <Link
+                            href="/bespoke-suits-bangalore"
+                            className="text-sm text-muted-foreground hover:text-foreground transition"
+                        >
+                            Bespoke Suits Bangalore
+                        </Link>
+                    </div>
                 </div>
             </div>
 

@@ -36,6 +36,14 @@ export default function BespokeSuitsPage() {
                 craftsmanship and detail, The Tailoring House offers a truly personal
                 tailoring experience.
             </p>
+
+            <p className="mt-12 text-sm text-muted-foreground">
+                Learn more about our craftsmanship at{" "}
+                <a href="/" className="underline underline-offset-4">
+                    The Tailoring House
+                </a>
+                .
+            </p>
         </main>
     );
 }

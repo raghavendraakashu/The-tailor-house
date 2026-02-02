@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import HeritageSection from "@/components/HeritageSection";
 import ServicesGrid from "@/components/ServicesGrid";
@@ -16,6 +17,18 @@ export default function Home() {
       <FabricPhilosophy />
       <Testimonials />
       <AppointmentCTA />
+      <div className="container mx-auto px-6 py-8 text-center text-sm">
+        <p className="text-secondary/70">
+          Experience timeless craftsmanship through our{" "}
+          <Link
+            href="/bespoke-suits-bangalore"
+            className="underline underline-offset-4 hover:text-foreground transition"
+          >
+            bespoke suits in Bangalore
+          </Link>
+          , tailored with precision and elegance.
+        </p>
+      </div>
     </main>
   );
 }
