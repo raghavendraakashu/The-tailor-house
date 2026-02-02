@@ -65,21 +65,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Tailor",
-              "name": "The Tailoring House",
-              "url": "https://the-tailor-house.vercel.app",
-              "description": "Luxury bespoke tailoring house crafting custom suits and garments with precision and heritage craftsmanship.",
-              "areaServed": {
-                "@type": "City",
-                "name": "Bangalore"
-              },
-              "address": {
+              name: "The Tailoring House",
+              url: "https://the-tailor-house.vercel.app",
+              description:
+                "Bespoke tailoring house crafting handcrafted suits, wedding wear, and formal garments.",
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "Bangalore",
-                "addressCountry": "IN"
+                addressCountry: "IN",
               },
-              "priceRange": "$$$",
-              "sameAs": []
-            })
+              areaServed: "India",
+              priceRange: "$$",
+            }),
           }}
         />
       </body>
