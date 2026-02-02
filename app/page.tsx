@@ -18,22 +18,22 @@ export default function Home() {
       <Testimonials />
       <AppointmentCTA />
       <div className="container mx-auto px-6 py-8 text-center text-sm">
-        <p className="text-secondary/70">
-          Experience timeless craftsmanship through our{" "}
+        <p className="text-muted-foreground">
+          Discover our{" "}
           <Link
             href="/bespoke-suits-bangalore"
-            className="underline underline-offset-4 hover:text-foreground transition"
+            className="underline underline-offset-4"
           >
             bespoke suits in Bangalore
           </Link>{" "}
           and{" "}
           <Link
             href="/wedding-tailor-bangalore"
-            className="underline underline-offset-4 hover:text-foreground transition"
+            className="underline underline-offset-4"
           >
-            wedding tailor services
-          </Link>
-          , tailored with precision and elegance.
+            wedding tailoring services
+          </Link>{" "}
+          crafted with timeless elegance.
         </p>
       </div>
     </main>

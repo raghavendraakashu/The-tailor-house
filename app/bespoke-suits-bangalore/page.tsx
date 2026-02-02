@@ -44,6 +44,17 @@ export default function BespokeSuitsPage() {
                 </a>
                 .
             </p>
+
+            <p className="mt-10 text-sm text-muted-foreground">
+                Planning a special occasion? Explore our{" "}
+                <a
+                    href="/wedding-tailor-bangalore"
+                    className="underline underline-offset-4"
+                >
+                    wedding tailoring in Bangalore
+                </a>
+                .
+            </p>
         </main>
     );
 }
